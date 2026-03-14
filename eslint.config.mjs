@@ -9,18 +9,8 @@ const compat = new FlatCompat({
   baseDirectory: __dirname,
 });
 
-const eslintConfig = defineConfig([
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    plugins: {
-      next: eslintNextPlugin,
-    },
-    settings: {
-      next: {
-        rootDir: 'packages/portfolio/',
-      },
-    },
-  },
-])
+const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript", "next/recommended"),
+];
 
 export default eslintConfig;

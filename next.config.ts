@@ -7,6 +7,6 @@ const nextConfig: NextConfig = {
 export default {
   ...nextConfig,
   experimental: {
-    turbo: false
+    turbo: true
   }
 }

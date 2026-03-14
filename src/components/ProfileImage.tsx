@@ -12,7 +12,8 @@ export default function ProfileImage({ src, alt, size = 200 }: ProfileImageProps
       <Image
         src={src}
         alt={alt}
-        fill
+        width={size}
+        height={size}
         className="rounded-full object-cover shadow-2xl hover:shadow-3xl transition-shadow duration-300 transform hover:scale-105"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       />
